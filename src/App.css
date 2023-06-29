@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: var(--theme-primary-font-family);
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+p:last-child {
+    margin: 0;
+}
+
+button {
+    font-family: var(--theme-primary-font-family);
+}
+
+a {
+    font-family: var(--theme-primary-font-family);
+}

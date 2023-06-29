@@ -1,0 +1,29 @@
+@import "../../../styles/mixins/index.scss";
+
+.status-tab {
+  padding: 40px 0 0px 0;
+}
+
+.add-pet-right-contnet-alignment {
+  @include flex;
+  justify-content: flex-end;
+  padding: 0 0 20px 0;
+  button {
+    padding: 10px 24px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    @include pointer;
+    border-radius: var(--theme-rounded-full);
+    background-color: var(--theme-orange-background-color);
+    border: 1px solid transparent;
+    color: var(--theme-white-text-color);
+    min-width: 120px;
+    @include breakpoint("sm-max") {
+      font-size: 12px;
+      line-height: 14px;
+      padding: 6px;
+      min-width: 80px;
+    }
+  }
+}

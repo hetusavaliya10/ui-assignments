@@ -1,0 +1,103 @@
+@import "../../../styles/mixins/index.scss";
+
+.all-login-content-alignment {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  @include breakpoint("sm-max") {
+    height: auto;
+  }
+  .grid {
+    @include grid;
+    grid-template-columns: 1fr 650px;
+    gap: 0;
+
+    @include breakpoint("sm-max") {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-items:nth-child(2) {
+      background-color: var(--theme-light-purple-background-color);
+      padding: 60px;
+      @include flex;
+      align-items: center;
+      height: 100vh;
+
+      @include breakpoint("sm-max") {
+        height: auto;
+        padding: 40px;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        background-color: var(--theme-orange-background-color);
+        font-size: 16px;
+        line-height: 24px;
+        font-family: var(--theme-primary-font-family);
+        font-weight: 700;
+        color: var(--theme-white-text-color);
+        border: none;
+        border-radius: var(--theme-rounded-full);
+      }
+
+      .dont-have-account {
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--theme-white-text-color);
+        font-weight: 400;
+        margin-top: 20px;
+        display: block;
+        text-align: center;
+        a {
+          color: var(--theme-white-text-color);
+          text-decoration: underline;
+          font-weight: 600;
+        }
+
+        @include breakpoint("sm-max") {
+          margin-top: 40px;
+        }
+      }
+
+      .two-grid {
+        @include grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .text {
+        padding: 0 0 30px 0;
+
+        @include breakpoint("sm-max") {
+          padding: 0 0 40px 0;
+        }
+        h1 {
+          font-size: 48px;
+          line-height: 60px;
+          color: var(--theme-white-text-color);
+          font-weight: 700;
+
+          @include breakpoint("sm-max") {
+            font-size: 32px;
+            line-height: 42px;
+          }
+        }
+      }
+    }
+
+    .grid-items:nth-child(1) {
+      background-image: url("../../assets/imges/image-6.jpg");
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      height: 100vh;
+      position: relative;
+
+      @include breakpoint("sm-max") {
+        height: 450px;
+      }
+    }
+  }
+}

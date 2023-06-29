@@ -1,0 +1,14 @@
+@import "breakpoints";
+@import "typography";
+@import "input";
+@import "layout";
+@import "../mixins/mixins";
+@import "../theme";
+@import "../container/container";
+
+button {
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

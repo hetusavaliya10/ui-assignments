@@ -1,0 +1,151 @@
+@import "../../../../styles/mixins/index.scss";
+
+.hero-banner-design {
+  padding: 120px 0;
+  background-color: #f0f3f2;
+  @include flex;
+  align-items: center;
+
+  &.show {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.25;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  &.hide {
+    display: none;
+    animation: fadeOut 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0.75;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.25;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @include breakpoint("sm-max") {
+    height: auto;
+    padding: 60px 0;
+  }
+  .w-full {
+    width: 100%;
+
+    .grid {
+      @include grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 60px;
+      align-items: center;
+
+      @include breakpoint("md-max") {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+        padding: 0 80px;
+      }
+
+      @include breakpoint("sm-max") {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0;
+      }
+
+      h1 {
+        font-size: 48px;
+        line-height: 60px;
+        color: var(--theme-black-100);
+        font-weight: 600;
+        max-width: 90%;
+        margin: 0 0 20px 0;
+
+        @include breakpoint("sm-max") {
+          font-size: 32px;
+          line-height: 42px;
+        }
+      }
+
+      span {
+        display: block;
+        font-size: 18px;
+        color: #544e5f;
+        font-weight: 400;
+        padding: 0 0 40px 0;
+        max-width: 550px;
+        line-height: 30px;
+
+        @include breakpoint("sm-max") {
+          font-size: 16px;
+          line-height: 26px;
+          margin: 0 0 30px 0;
+        }
+      }
+
+      button {
+        background-color: var(--theme-orange-background-color);
+        border: 1px solid transparent;
+        padding: 10px 24px;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 600;
+        @include pointer;
+        border-radius: var(--theme-rounded-full);
+        min-width: 120px;
+        color: var(--theme-white-text-color);
+
+        @include breakpoint("sm-max") {
+          font-size: 14px;
+          min-width: 120px;
+        }
+      }
+
+      .image {
+        position: relative;
+
+        .vector {
+          top: 48px;
+          left: 50%;
+          transform: translateX(-50%);
+          position: absolute;
+
+          @include breakpoint("sm-max") {
+            width: 76%;
+          }
+        }
+
+        .main-image {
+          width: 100%;
+          position: relative;
+          z-index: 9;
+        }
+      }
+    }
+  }
+}

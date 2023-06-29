@@ -1,0 +1,32 @@
+@import "../../../../styles/mixins/index.scss";
+
+.states-details-all-content-alignment {
+  padding: 90px 0;
+
+  .section-title {
+    padding: 0 0 40px 0;
+    span {
+      display: block;
+      text-align: center;
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: 2.6px;
+      color: var(--theme-orange-text-color);
+      font-weight: 600;
+      padding: 0 0 10px 0;
+    }
+
+    h2 {
+      font-size: 48px;
+      line-height: 60px;
+      color: var(--theme-black-100);
+      font-weight: 700;
+      text-align: center;
+
+      @include breakpoint("sm-max") {
+        font-size: 32px;
+        line-height: 42px;
+      }
+    }
+  }
+}
